@@ -10,9 +10,7 @@ class Song < ActiveRecord::Base
   end
 
   def genre_name
-    if self.genre
-      self.genre.name
-    end
+    genre&.name
   end
 
   def artist_name=(name)
@@ -21,9 +19,7 @@ class Song < ActiveRecord::Base
   end
 
   def artist_name
-    if self.artist
-      self.artist.name
-    end
+    artist&.name
   end
 
   def note_contents=(note_content)
@@ -36,6 +32,6 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents
-    self.notes.map{ |note| note.content }
+    notes.map(&:content)
   end
 end
