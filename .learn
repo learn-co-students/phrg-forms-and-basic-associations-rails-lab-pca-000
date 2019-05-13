@@ -1,9 +1,0 @@
-tags:
-  - forms
-  - associations
-  - collection_select
-  - datalist  
-languages:
-  - ruby
-resources: 0
-parent_template: git@github.com:learn-co-curriculum/forms-and-basic-associations-rails-lab.git
